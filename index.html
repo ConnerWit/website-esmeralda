@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identity Hair Salon</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Identity Hair Salon" class="logo">
+    </a>
+    <ul class="navbar-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="ons-concept.html">Ons Concept</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="ons-concept.html">Ons Concept</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="assets/hero.png" alt="Identity Hair Salon interieur">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Westersingel 87-A · Rotterdam</p>
+      <h1>Welkom bij<br><span class="hero-brand">Identity</span><br>Hair Salon</h1>
+      <p class="hero-sub">Jouw haar, jouw identiteit.</p>
+      <div class="hero-buttons">
+        <a href="https://www.salonhub.nl" class="btn">Boek je afspraak</a>
+        <a href="tel:+31000000000" class="btn-outline">Bel ons</a>
+      </div>
+    </div>
+    <div class="hero-rating">
+      <p class="rating-label">Onze klanten geven ons</p>
+      <p class="rating-score">4,9 ★</p>
+      <p class="rating-source">Google Maps 2025</p>
+    </div>
+  </section>
+
+  <!-- Acties Banner -->
+  <section class="acties-banner">
+    <div class="acties-banner-inner">
+      <div class="acties-text">
+        <p class="acties-eyebrow">Keune Ambassadeur Salon</p>
+        <h2>Bekijk onze actuele acties</h2>
+        <p>Elke maand nieuwe Keune-behandelingen en aanbiedingen — speciaal voor onze klanten.</p>
+      </div>
+      <a href="ons-concept.html#acties" class="btn-acties">Bekijk actieschema →</a>
+    </div>
+  </section>
+
+  <!-- Info -->
+  <section class="info">
+    <div class="locatie">
+      <h2>Locatie</h2>
+      <address>
+        Westersingel 87-A<br>
+        3015 LC Rotterdam
+      </address>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Westersingel+87,+Rotterdam&output=embed&hl=nl&z=15"
+          frameborder="0"
+          allowfullscreen
+          title="Locatie Identity Hair Salon">
+        </iframe>
+      </div>
+    </div>
+    <div class="divider-v"></div>
+    <div class="openingstijden">
+      <h2>Openingstijden</h2>
+      <ul>
+        <li><span class="day">Maandag</span>   <span class="time closed">Gesloten</span></li>
+        <li><span class="day">Dinsdag</span>   <span class="time">09:00 – 17:00</span></li>
+        <li><span class="day">Woensdag</span>  <span class="time closed">Gesloten</span></li>
+        <li><span class="day">Donderdag</span> <span class="time">09:00 – 19:00</span></li>
+        <li><span class="day">Vrijdag</span>   <span class="time">09:00 – 19:00</span></li>
+        <li><span class="day">Zaterdag</span>  <span class="time">09:00 – 17:00</span></li>
+        <li><span class="day">Zondag</span>    <span class="time closed">Gesloten</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <p class="section-eyebrow">Wat klanten zeggen</p>
+    <h2>Reviews</h2>
+    <div class="review-carousel-wrapper">
+      <button class="prev" aria-label="Vorige">&#x2039;</button>
+      <div class="review-carousel">
+        <blockquote class="review-item active">"Er zijn veel kappers, maar weinig goede! Hier een zeer tevreden klant — prachtig resultaat, elke keer weer."</blockquote>
+        <blockquote class="review-item">"Super klantvriendelijk, fijne sfeer en geweldig resultaat. Zeker een aanrader!"</blockquote>
+        <blockquote class="review-item">"Fantastische salon die echt de tijd neemt en persoonlijk kijkt wat je wil. Ik ga altijd met een grote glimlach weg."</blockquote>
+        <blockquote class="review-item">"Vakkundige stylisten, fijne sfeer in de zaak — altijd tevreden naar huis."</blockquote>
+        <blockquote class="review-item">"Huiskamergevoel, heel persoonlijk en relaxed. En dan ook nog mooi geknipt de deur uit! 😊"</blockquote>
+        <blockquote class="review-item">"Superfijn team. Denken echt met je mee en de sfeer is geweldig. Aanrader!"</blockquote>
+      </div>
+      <button class="next" aria-label="Volgende">&#x203A;</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-brand">Identity Hair Salon</span>
+    <span class="footer-tagline">
+      Jouw haar, jouw identiteit.
+      <span class="scissors-icon">✂</span>
+    </span>
+    <span class="footer-values">Persoonlijk &nbsp;|&nbsp; Kwaliteit &nbsp;|&nbsp; Beleving</span>
+  </footer>
+
+  <script>
+    // Hamburger
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobile-nav');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('open');
+      mob.classList.toggle('open');
+    });
+
+    // Review carousel
+    const items = document.querySelectorAll('.review-item');
+    let current = 0;
+    const show = (n) => {
+      items[current].classList.remove('active');
+      current = (n + items.length) % items.length;
+      items[current].classList.add('active');
+    };
+    document.querySelector('.prev').addEventListener('click', () => show(current - 1));
+    document.querySelector('.next').addEventListener('click', () => show(current + 1));
+    setInterval(() => show(current + 1), 5000);
+  </script>
+
+</body>
+</html>
