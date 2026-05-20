@@ -245,6 +245,12 @@
   border-radius: 999px;
 }
 
+.actie-badge--leeg {
+  background: transparent;
+  border-color: rgba(122,154,126,0.2);
+  color: #bbb;
+}
+
 /* ── CTA ─────────────────────────────────────────────── */
 .acties-cta {
   background: var(--cream);
